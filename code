@@ -1,0 +1,30 @@
+long number = 3;
+
+void setup()
+{
+  Serial.begin(9600);
+  Serial.println("#");
+  Serial.println("1");
+  Serial.println("2");
+}
+
+void loop()
+{
+  int is_prime = 1;
+  long i = 3;
+  long top = sqrt(number);
+  while (i<top)
+  {
+    if (number%i == 0)
+    {
+      is_prime = 0;
+      break;
+    }
+    i++;
+  }
+  if (is_prime)
+  {
+    Serial.println(number,DEC);
+  }
+  number += 2;
+}
